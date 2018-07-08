@@ -24,10 +24,7 @@
 }
 
 body {
-	box-sizing: border-box;
-	height: 100%;
 	margin: 0;
-	padding-top: 50%;
 }
 
 body,
@@ -51,10 +48,6 @@ body,
 	height: 74px;
 	margin: 70px 0 -144px 0;
 	position: relative;
-}
-
-html {
-	height: 100%;
 }
 
 #sonic-box {
@@ -127,11 +120,11 @@ html {
 	background-position: 0 150px;
 	background-repeat: repeat-x;
 	box-sizing: border-box;
-	height: calc(100% + 128px);
-	margin-top: -128px;
+	height: calc(50vh + 128px);
+	margin-top: calc(50vh - 128px);
 	min-height: 257px;
 	position: relative;
-	width: 100%;
+	width: 100vw;
 }
 
 	#sonic-water > div {
