@@ -1,0 +1,140 @@
+@keyframes sonic1 {
+	0%   { top: 51px; }
+	100% { top: -6px;  }
+}
+
+@keyframes sonic2 {
+	0%     { background-position: -90px      0; top: -6px; }
+	19.99% { background-position: -90px      0; }
+	20%    { background-position:     0  -77px; }
+	39.99% { background-position:     0  -77px; }
+	40%    { background-position: -90px  -77px; }
+	59.99% { background-position: -90px  -77px; }
+	60%    { background-position:     0 -154px; }
+	79.99% { background-position:     0 -154px; }
+	80%    { background-position: -90px -154px; }
+	100%   { background-position: -90px -154px; top: -6px; }
+}
+
+@keyframes sonic3 {
+	0%     { background-position:     0 -231px; top: -6px; }
+	49.99% { background-position:     0 -231px; }
+	50%    { background-position: -90px -231px; }
+	100%   { background-position: -90px -231px; top: -6px; }
+}
+
+body {
+	box-sizing: border-box;
+	height: 100%;
+	margin: 0;
+	padding-top: 50%;
+}
+
+body,
+#sonic-far,
+#sonic-near {
+	background-color: #2400b6;
+}
+
+/* Emblem background */
+#emblem-bg {
+	background-image: url("images/sonic.gif");
+	background-position: left bottom;
+	height: 100%;
+	width: 100%;
+}
+
+/* Emblem bottom */
+#emblem-fg {
+	background-image: url("images/sonic.gif");
+	background-position: left bottom;
+	height: 74px;
+	margin: 70px 0 -144px 0;
+	position: relative;
+}
+
+html {
+	height: 100%;
+}
+
+#sonic-box {
+	cursor: pointer;
+	height: 144px;
+	margin: -95px auto 0 auto;
+	position: relative;
+	width: 255px;
+}
+
+#sonic-far,
+#sonic-far > div {
+	height: 112px;
+}
+
+#sonic-far > div { background-image: url("images/far.gif"); }
+
+#sonic-far > div,
+#sonic-near > div {
+	display: inline-block;
+	width: 256px;
+}
+
+/* Sonic */
+#sonic-hedgehog {
+	animation-delay:           0s,     1s,     1.5s;
+	animation-duration:        1s,     0.5s,   0.5s;
+	animation-iteration-count: 1,      1,      infinite;
+	animation-name:            sonic1, sonic2, sonic3;
+	animation-timing-function: ease,   linear, linear;
+	background-image: url("images/sonic.gif");
+	background-position: left top;
+	bottom: 0;
+	height: 77px;
+	left: 6px;
+	margin: 0 auto -77px auto;
+	position: relative;
+	top: 51px;
+	width: 90px;
+}
+
+#sonic-near,
+#sonic-near > div {
+	height: 40px;
+}
+
+.sonic-near1 { background-image: url("images/near/1.gif"); }
+.sonic-near2 { background-image: url("images/near/2.gif"); }
+.sonic-near3 { background-image: url("images/near/3.gif"); }
+.sonic-near4 { background-image: url("images/near/4.gif"); }
+.sonic-near5 { background-image: url("images/near/5.gif"); }
+.sonic-near6 { background-image: url("images/near/6.gif"); }
+.sonic-near7 { background-image: url("images/near/7.gif"); }
+
+#sonic-volume {
+	bottom: 1rem;
+	cursor: pointer;
+	left: 1rem;
+	opacity: 0.25;
+	position: absolute;
+}
+
+	#sonic-volume:hover {
+		opacity: 0.75;
+	}
+
+#sonic-water {
+	background-color: #2492db;
+	background-image: url("images/water.gif");
+	background-position: 0 150px;
+	background-repeat: repeat-x;
+	box-sizing: border-box;
+	height: calc(100% + 128px);
+	margin-top: -128px;
+	min-height: 257px;
+	position: relative;
+	width: 100%;
+}
+
+	#sonic-water > div {
+		overflow: hidden;
+		white-space: nowrap;
+	}
