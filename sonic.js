@@ -2,7 +2,6 @@ var audio  = document.getElementsByTagName("audio"),
   audioCur = 0,
   far      = document.getElementById("sonic-far"),
 	farPos   = 0,
-	// konami   = new Konami(),
   near     = document.getElementById("sonic-near"),
   nearPos  = 0,
   speed    = 0.25,
@@ -89,11 +88,10 @@ window.addEventListener("load",   scroll);
 window.addEventListener("resize", resize);
 
 // After the Konami library has loaded,
-/*
 window.addEventListener(
   "load",
   function() {
-    konami.add(function() {
+    Konami.add(function() {
       audio[audioCur].pause();
       audioCur = (audioCur + 1) % 2;
       audio[audioCur].load();
@@ -101,4 +99,3 @@ window.addEventListener(
     });
   }
 );
-*/
